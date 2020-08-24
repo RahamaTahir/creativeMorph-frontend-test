@@ -50,9 +50,9 @@ export default function programmer(state = defaultState, action: any) {
       return {
         ...state,
         selectedProgrammersArray: [
-            ...state.selectedProgrammersArray.map(element => {
+            ...state.selectedProgrammersArray.map(item => {
               element.name === action.payload.name
-                ? (element.level = action.payload.level)
+                ? (item.level = action.payload.level)
                 : '';
               return element;
             }),
